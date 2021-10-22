@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Activity Predictor</title>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <h2 class="container-heading"><span class="heading_font">Activity Prediction</span></h2>
+        <div class='description'>
+            <p>Activities</p>
+        </div>
+    </div>
+
+    <div class="results">
+        {% if prediction==1 %}
+            <h1>Prediction : <span class="sit on bed"></span>The Person is sitting on the bed</h1>
+        {% elif prediction==2 %}
+            <h1>Prediction: <span class='sit on chair'>The Person is sitting on chair</span></h1>
+        {% elif prediction==3 %}
+            <h1>Prediction: <span class='lying'>The Person is lying.</span></h1>
+        {% elif prediction==4 %}
+            <h1>Prediction: <span class='danger'>The Person is ambulating</span></h1>
+        {% endif %}
+    </div>
+   
+   
+
+    
+</body>
+</html>

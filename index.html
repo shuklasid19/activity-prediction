@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict the activity</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Website Title -->
+<div class="container">
+    <h2 class='container-heading'><span class="heading_font">Wine quality Predictor</span></h2>
+    <div class='description'>
+        <p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    </div>
+</div>
+<!-- <center> -->
+
+
+<!-- Text Area -->
+<div class="ml-container">
+    <form action="{{ url_for('predict') }}" method="POST">
+        <input class="form-input" type="text" name="time_in_sec" placeholder="time_in_sec eg. 5.5"><br>
+        <input class="form-input" type="text" name="Acceleration_lateral_axis" placeholder="Acceleration_lateral_axis"><br>
+        <input class="form-input" type="text" name="Acceleration_vertical_axis" placeholder="Acceleration_vertical_axis"><br>
+        <input class="form-input" type="text" name="id_of_antenna_reading" placeholder="id_of_antenna_reading eg.0.5"><br>
+        <input class="form-input" type="text" name="signal_strength_indicator" placeholder="signal_strength_indicator eg.0.05"><br>
+        <input class="form-input" type="text" name="Phase" placeholder="Phase eg.0.5"><br>
+        <input class="form-input" type="text" name="Frequency" placeholder="Frequency eg.0.05"><br>
+    
+        <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+<!-- </center> -->
+    </div>
+
+    <div class="footer">
+        <a target="_blank" href="https://github.com/praneeth300"><i class="fab fa-github fa-lg contact-icon"></i></a>
+    
+    </div>
+
+</body>
+</html>
